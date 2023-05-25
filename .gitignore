@@ -2,7 +2,7 @@
 .vscode
 build
 out
-cmake-build-debug
+cmake-build-debug-mingw
 cmake-build-release
 .DS_Store
 .vs

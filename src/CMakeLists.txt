@@ -7,7 +7,7 @@ add_executable(${pro}
         "learnopengl/shader.h"
         "learnopengl/mesh.h"
         "learnopengl/model.h"
-        main.cpp)
+        main.cpp TBN.h)
 
 target_link_libraries(${pro} PRIVATE assimp::assimp glew_s glm stb glfw tinyobjloader)
 target_include_directories(${pro} PRIVATE

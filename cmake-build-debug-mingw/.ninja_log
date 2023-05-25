@@ -17,7 +17,7 @@
 569	803	7066821907103109	third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/zutil.obj	4eeb497115faf4d0
 506	821	7066821907233939	third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/gzwrite.obj	d19e77ee83e411e3
 533	996	7066821908961898	third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/inflate.obj	a98657bff8c0d6c8
-10030	11297	7066822011887766	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Version.cpp.obj	fe4145245a0cb011
+32	1440	7066848719629890	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Version.cpp.obj	fe4145245a0cb011
 560	1132	7066821910178790	third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/trees.obj	d19c69914da5937b
 9895	13577	7066822034793882	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Subdivision.cpp.obj	2118a0302022b928
 804	1161	7066821910555195	third_party/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir/uncompr.obj	6282b7e4a286c9cc
@@ -31,7 +31,7 @@
 2264	4062	7066821939742984	third_party/assimp/code/CMakeFiles/assimp.dir/Common/ImporterRegistry.cpp.obj	1b6dbac509c2ce27
 11106	12174	7066822020763341	third_party/assimp/code/CMakeFiles/assimp.dir/Common/CreateAnimMesh.cpp.obj	f0402ed70964c517
 2035	4696	7066821946039127	third_party/assimp/code/CMakeFiles/assimp.dir/Common/PostStepRegistry.cpp.obj	df5b945633358af6
-9	4803	7066821946826367	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
+33	2957	7066850817687163	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
 1798	5419	7066821953282472	third_party/assimp/code/CMakeFiles/assimp.dir/Common/DefaultIOSystem.cpp.obj	29e52ddef64b997e
 4064	5444	7066821953444064	third_party/assimp/code/CMakeFiles/assimp.dir/CApi/CInterfaceIOWrapper.cpp.obj	f1d613b58cf67162
 3551	7172	7066821970773606	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Assimp.cpp.obj	85b83f9d5a7b91d0
@@ -130,13 +130,5 @@
 42257	43855	7066822337577630	third_party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	178c79eb909dca1b
 43856	44072	7066822339778385	third_party/glfw/src/libglfw3d.a	8e7e8e0efe0a2269
 42650	47107	7066822370068996	third_party/tinyobjloader/CMakeFiles/tinyobjloader.dir/tiny_obj_loader.cc.obj	950c72041515be2b
-37814	61097	7066822509843473	third_party/assimp/code/libassimpd.a	f440b5592219cf14
-61098	65904	7066822557687922	src/Rock.exe	2c848b7ac73a0ae4
-32	1440	7066848719629890	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Version.cpp.obj	fe4145245a0cb011
-23	3202	7066848737457821	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
 1443	25094	7066848956343629	third_party/assimp/code/libassimpd.a	f440b5592219cf14
-25096	25741	7066848962660467	src/Rock.exe	2c848b7ac73a0ae4
-34	3454	7066849144113796	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
-3456	4544	7066849154677350	src/Rock.exe	2c848b7ac73a0ae4
-33	2957	7066850817687163	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
 2959	3741	7066850825262219	src/Rock.exe	2c848b7ac73a0ae4
