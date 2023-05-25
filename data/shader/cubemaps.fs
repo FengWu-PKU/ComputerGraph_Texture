@@ -23,7 +23,7 @@ void main()
     normal = normalize(fs_in.TBN * normal);
 
     // 环境光照
-    float ambientStrength=0.1;
+    float ambientStrength=0.3;
     vec3 ambient=ambientStrength*lightColor;
     // 漫反射
     vec3 lightDir=normalize(lightPos-fs_in.FragPos);
