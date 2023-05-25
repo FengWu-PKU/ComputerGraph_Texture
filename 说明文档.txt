@@ -1,0 +1,8 @@
+实现了立方体的纹理
+控制相机：wasd移动位置，鼠标控制视点
+控制光源：
+    KEY_UP/DOWN---光源的y分量增加/减少
+    KEY_RIGHT/LEFT---光源的x分量增加/减少
+    KEY_PAGE_UP/PAGE_DOWN---光源的z分量增加减少
+
+法向贴图的实现思路：根据顶点坐标计算出TBN矩阵，把它传给fragment shader，将TBN与法向贴图的法向量相乘，使得法相贴图的normal变成世界坐标系下

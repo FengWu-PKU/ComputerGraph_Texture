@@ -36,6 +36,11 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+
+glm::vec3 lightPos=glm::vec3(0.8f, 0.8f, 0.0f);
+glm::vec3 lightColor=glm::vec3(1.0f,0.84f, 0.0f);
+float lightSpeed=2.5f;
+
 int main()
 {
     // glfw: initialize and configure
@@ -189,9 +194,6 @@ int main()
 //    skyboxShader.use();
 //    skyboxShader.setInt("skybox", 0);
 
-    // 先固定光源的位置和颜色看一下
-    glm::vec3 lightPos=glm::vec3(0.8f, 0.8f, 0.0f);
-    glm::vec3 lightColor=glm::vec3(1.0f,0.84f, 0.0f);
 
     // render loop
     // -----------
@@ -266,6 +268,18 @@ void processInput(GLFWwindow *window)
         camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
+    if(glfwGetKey(window,GLFW_KEY_UP)==GLFW_PRESS)
+        lightPos.y+=lightSpeed*deltaTime;
+    if(glfwGetKey(window,GLFW_KEY_DOWN)==GLFW_PRESS)
+        lightPos.y-=lightSpeed*deltaTime;
+    if(glfwGetKey(window,GLFW_KEY_LEFT)==GLFW_PRESS)
+        lightPos.x-=lightSpeed*deltaTime;
+    if(glfwGetKey(window,GLFW_KEY_RIGHT)==GLFW_PRESS)
+        lightPos.x+=lightSpeed*deltaTime;
+    if(glfwGetKey(window,GLFW_KEY_PAGE_UP)==GLFW_PRESS)
+        lightPos.z+=lightSpeed*deltaTime;
+    if(glfwGetKey(window,GLFW_KEY_PAGE_DOWN)==GLFW_PRESS)
+        lightPos.z-=lightSpeed*deltaTime;
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
