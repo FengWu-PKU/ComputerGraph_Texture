@@ -1,0 +1,268 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/Rock.exe"
+		},
+		{
+			"path" : "src/Rock.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "GLEW_STATIC"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/src/../third_party/glew/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/cmake-build-debug-mingw/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/third_party/assimp/code/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/cmake-build-debug-mingw/third_party/assimp/code/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/third_party/glm/glm/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/third_party/stb/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/third_party/glfw/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/third_party/tinyobjloader/."
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "assimp::@e69262fcfcaaf4b4e91a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "IrrXML::@9870f516fc688440b72b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "zlibstatic::@931428be9c65b3dce2e3"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "stb::@f2aa1405f3c1fba9b97b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "glew_s::@2b454ed9ff15f1c897f1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "tinyobjloader::@4cda0e95deaf9d3114db"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "glfw::@d5fdcda1ec52eb23cf38"
+		}
+	],
+	"id" : "Rock::@145eef247bfb46b6828c",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "third_party\\assimp\\code\\libassimpd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "lib\\libglew32d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "third_party\\stb\\libstbd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "third_party\\glfw\\src\\libglfw3d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "third_party\\tinyobjloader\\libtinyobjloaderd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "third_party\\assimp\\contrib\\zlib\\libzlibstaticd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "third_party\\assimp\\contrib\\irrXML\\libIrrXMLd.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lopengl32",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lglu32",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Rock",
+	"nameOnDisk" : "Rock.exe",
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "src/gl_env.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/texture_image.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/learnopengl/camera.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/learnopengl/shader.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/learnopengl/mesh.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/learnopengl/model.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -1,0 +1,39 @@
+"C:\Program Files\JetBrains\CLion 2022.1.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.1.3/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\sakura\Desktop\Spring23\Graph\labs\Rock-cmake -B C:\Users\sakura\Desktop\Spring23\Graph\labs\Rock-cmake\cmake-build-debug-mingw
+-- Shared libraries disabled
+-- Looking for DirectX...
+-- DirectX_PREFIX_PATH changed.
+-- Could not locate DirectX
+-- Looking for ZLIB...
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Could not locate ZLIB
+-- compiling zlib from sources
+CMake Deprecation Warning at third_party/assimp/contrib/zlib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Build an import-only version of Assimp.
+CMake Warning (dev) at C:/Program Files/JetBrains/CLion 2022.1.3/bin/cmake/win/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (rt) does
+  not match the name of the calling package (RT).  This can lead to problems
+  in calling code that expects `find_package` result variables (e.g.,
+  `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  third_party/assimp/cmake-modules/FindRT.cmake:19 (find_package_handle_standard_args)
+  third_party/assimp/code/CMakeLists.txt:555 (FIND_PACKAGE)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find rt (missing: RT_LIBRARY) 
+INFO Hunter enabled or RT-extension not found. glTF import/export will be built without Open3DGC-compression.
+-- Enabled importer formats: FBX
+-- Disabled importer formats:
+-- Enabled exporter formats:
+-- Disabled exporter formats:
+-- GLM: Version 0.9.9.9
+-- Using Win32 for window creation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/sakura/Desktop/Spring23/Graph/labs/Rock-cmake/cmake-build-debug-mingw
