@@ -13,6 +13,8 @@
 
 #include <iostream>
 
+#include "TBN.h"
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -78,7 +80,6 @@ int main()
     // build and compile shaders
     // -------------------------
     Shader shader(SHADER_DIR"/cubemaps.vs", SHADER_DIR"/cubemaps.fs");
-//    Shader skyboxShader("6.1.skybox.vs", "6.1.skybox.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -127,6 +128,34 @@ int main()
             -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f
     };
 
+    // 计算tangent, bitangent
+    for(int i=0;i<6;i++) {
+        int idx1=i*6*14;
+        int idx2=idx1+14;
+        int idx3=idx2+14;
+        glm::vec3 pos1(cubeVertices[idx1],cubeVertices[idx1+1],cubeVertices[idx1+2]);
+        glm::vec2 uv1(cubeVertices[idx1+3],cubeVertices[idx1+4]);
+        glm::vec3 pos2(cubeVertices[idx2],cubeVertices[idx2+1],cubeVertices[idx2+2]);
+        glm::vec2 uv2(cubeVertices[idx2+3],cubeVertices[idx2+4]);
+        glm::vec3 pos3(cubeVertices[idx3],cubeVertices[idx3+1],cubeVertices[idx3+2]);
+        glm::vec2 uv3(cubeVertices[idx3+3],cubeVertices[idx3+4]);
+        glm::vec3 norm(cubeVertices[idx1+5],cubeVertices[idx1+6],cubeVertices[idx1+7]);
+
+        struct TBN_t tbn= calcTBN(pos1, pos2, pos3, uv1, uv2, uv3, norm);
+        //写入数组
+        int idx=idx1;
+        for(int j=0;j<6;j++) {
+            cubeVertices[idx+8]=tbn.tangent.x;
+            cubeVertices[idx+9]=tbn.tangent.y;
+            cubeVertices[idx+10]=tbn.tangent.z;
+            cubeVertices[idx+11]=tbn.bitangent.x;
+            cubeVertices[idx+12]=tbn.bitangent.y;
+            cubeVertices[idx+13]=tbn.bitangent.z;
+            idx+=14;
+        }
+        
+    }
+
     // cube VAO
     unsigned int cubeVAO, cubeVBO;
     glGenVertexArrays(1, &cubeVAO);
@@ -135,9 +164,15 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), &cubeVertices, GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 14 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 14 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 14 * sizeof(float), (void*)(5 * sizeof(float)));
+    glEnableVertexAttribArray(3);
+    glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 14 * sizeof(float), (void*)(8 * sizeof(float)));
+    glEnableVertexAttribArray(4);
+    glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, 14 * sizeof(float), (void*)(11 * sizeof(float)));
 
     // load textures
     // -------------
