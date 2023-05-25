@@ -132,3 +132,11 @@
 42650	47107	7066822370068996	third_party/tinyobjloader/CMakeFiles/tinyobjloader.dir/tiny_obj_loader.cc.obj	950c72041515be2b
 37814	61097	7066822509843473	third_party/assimp/code/libassimpd.a	f440b5592219cf14
 61098	65904	7066822557687922	src/Rock.exe	2c848b7ac73a0ae4
+32	1440	7066848719629890	third_party/assimp/code/CMakeFiles/assimp.dir/Common/Version.cpp.obj	fe4145245a0cb011
+23	3202	7066848737457821	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
+1443	25094	7066848956343629	third_party/assimp/code/libassimpd.a	f440b5592219cf14
+25096	25741	7066848962660467	src/Rock.exe	2c848b7ac73a0ae4
+34	3454	7066849144113796	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
+3456	4544	7066849154677350	src/Rock.exe	2c848b7ac73a0ae4
+33	2957	7066850817687163	src/CMakeFiles/Rock.dir/main.cpp.obj	3ec2f6cad332afed
+2959	3741	7066850825262219	src/Rock.exe	2c848b7ac73a0ae4
