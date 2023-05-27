@@ -38,7 +38,7 @@ float lastFrame = 0.0f;
 
 
 glm::vec3 lightPos=glm::vec3(0.8f, 0.8f, 0.0f);
-glm::vec3 lightColor=glm::vec3(1.0f,0.84f, 0.0f);
+glm::vec3 lightColor=glm::vec3(1.0f,1.0f, 1.0f);
 float lightSpeed=2.5f;
 
 int main()
